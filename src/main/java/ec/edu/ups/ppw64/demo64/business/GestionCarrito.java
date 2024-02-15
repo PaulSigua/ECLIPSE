@@ -94,11 +94,11 @@ public class GestionCarrito {
 	public void limpiarDetalles(int codigoCarrito) throws Exception {
 		Carrito carObtenido = getCarritoPorId(codigoCarrito);
 		List<DetalleCarrito> detallesExistentes = carObtenido.getDetalles();
-		boolean encontroProducto = false;
 		if (detallesExistentes.size() == 0) {
 			System.out.println("Si entra aqui es por que esta mal");
 		} else {
 			carObtenido.getDetalles().clear();
+			System.out.println("Carrito obtenido: " + carObtenido.getDetalles());
 			daoCarrito.update(carObtenido);
 		}
 

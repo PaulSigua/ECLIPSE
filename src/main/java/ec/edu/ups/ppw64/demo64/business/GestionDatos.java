@@ -135,7 +135,7 @@ public class GestionDatos {
 		pro10.setNombre("Traje elegante para hombre");
 		pro10.setPrecio((float) 199.99);
 		pro10.setCaracteristicas("Traje formal para eventos especiales");
-		pro10.setImagen("https:/i.pinimg.com/564x/9b/70/ca/9b70caf93644c9a6b494defe46850a08.jpg");
+		pro10.setImagen("https://i.pinimg.com/564x/9b/70/ca/9b70caf93644c9a6b494defe46850a08.jpg");
 		pro10.setCategoria(cat1);
 		pro10.setDescripcionGeneral("Confeccionado con materiales de alta calidad");
 
@@ -764,6 +764,38 @@ public class GestionDatos {
 		pro86.setCategoria(cat6);
 		pro86.setDescripcionGeneral("Obtén energía portátil en cualquier lugar con este generador eléctrico");
 
+		Producto pro87 = new Producto();
+		pro87.setNombre("Zapatos Converse All Star");
+		pro87.setPrecio((float) 90.00);
+		pro87.setCaracteristicas("Los clasicos jamás pasan de moda, más comodos que nunca!!!!");
+		pro87.setImagen("https://i.pinimg.com/564x/71/e0/6a/71e06affe9952eb328c9962a7ddf03c8.jpg");
+		pro87.setCategoria(cat1);
+		pro87.setDescripcionGeneral("Los nuevos Zapatos Converse presentan una mejora en la planta del pie \n"
+				+ "Mejor pisada \n"
+				+ "Mejor agarre \n"
+				+ "Y lo más importante es que son aún más comodos");
+		
+		Producto pro88 = new Producto();
+		pro88.setNombre("Zapatos Converse All Star Rojos Caña alta");
+		pro88.setPrecio((float) 94.99);
+		pro88.setCaracteristicas("Los clásicos han vuelto mejor que nunca");
+		pro88.setImagen("https://i.pinimg.com/564x/cf/97/9c/cf979cd31c1243290d784925e8b23bfa.jpg");
+		pro88.setCategoria(cat1);
+		pro88.setDescripcionGeneral("Los nuevos Zapatos Converse Caña alta se caracterizan por \n"
+				+ "				+ \"Una mejor suela \\n\"\n"
+				+ "				+ \"Mejor agarre \\n\"\n"
+				+ "				+ \"Y lo más importante es que son aún más comodos\"");
+		
+		Producto pro89 = new Producto();
+		pro89.setNombre("Zapatos Vans BiColor Negro y Azul");
+		pro89.setPrecio((float) 94.99);
+		pro89.setCaracteristicas("Vans se caracteriza por imnovar");
+		pro89.setImagen("https://i.pinimg.com/564x/a1/19/5c/a1195c7b1aa788d3436d7e4772d24bcf.jpg");
+		pro89.setCategoria(cat1);
+		pro89.setDescripcionGeneral("Los nuevos Vans BiColor son perfectos \n"
+				+ "				+ \"Disponibles para cualquier situación \\n\"\n"
+				+ "				+ \"Más comodidad \\n\"\n");
+		
 		
 		daoProducto.insert(pro1);
 		daoProducto.insert(pro2);
@@ -851,6 +883,9 @@ public class GestionDatos {
 		daoProducto.insert(pro84);
 		daoProducto.insert(pro85);
 		daoProducto.insert(pro86);
+		daoProducto.insert(pro87);
+		daoProducto.insert(pro88);
+		daoProducto.insert(pro89);
 
 
 		cat1.addProducto(pro1);
