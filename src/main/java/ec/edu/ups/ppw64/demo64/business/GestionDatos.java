@@ -770,10 +770,8 @@ public class GestionDatos {
 		pro87.setCaracteristicas("Los clasicos jamás pasan de moda, más comodos que nunca!!!!");
 		pro87.setImagen("https://i.pinimg.com/564x/71/e0/6a/71e06affe9952eb328c9962a7ddf03c8.jpg");
 		pro87.setCategoria(cat1);
-		pro87.setDescripcionGeneral("Los nuevos Zapatos Converse presentan una mejora en la planta del pie \n"
-				+ "Mejor pisada \n"
-				+ "Mejor agarre \n"
-				+ "Y lo más importante es que son aún más comodos");
+		pro87.setDescripcionGeneral("Los nuevos Zapatos Converse presentan una mejora en la planta del pie, mejor pisada, "
+				+ "mejor agarre y lo más importante es que son aún más comodos");
 		
 		Producto pro88 = new Producto();
 		pro88.setNombre("Zapatos Converse All Star Rojos Caña alta");
@@ -781,20 +779,15 @@ public class GestionDatos {
 		pro88.setCaracteristicas("Los clásicos han vuelto mejor que nunca");
 		pro88.setImagen("https://i.pinimg.com/564x/cf/97/9c/cf979cd31c1243290d784925e8b23bfa.jpg");
 		pro88.setCategoria(cat1);
-		pro88.setDescripcionGeneral("Los nuevos Zapatos Converse Caña alta se caracterizan por \n"
-				+ "				+ \"Una mejor suela \\n\"\n"
-				+ "				+ \"Mejor agarre \\n\"\n"
-				+ "				+ \"Y lo más importante es que son aún más comodos\"");
+		pro88.setDescripcionGeneral("Los nuevos Zapatos Converse Caña alta se caracterizan por una mejor suela, mejor agarre, y lo más importante es que son aún más comodos");
 		
 		Producto pro89 = new Producto();
 		pro89.setNombre("Zapatos Vans BiColor Negro y Azul");
 		pro89.setPrecio((float) 94.99);
-		pro89.setCaracteristicas("Vans se caracteriza por imnovar");
+		pro89.setCaracteristicas("Vans se caracteriza por innovar");
 		pro89.setImagen("https://i.pinimg.com/564x/a1/19/5c/a1195c7b1aa788d3436d7e4772d24bcf.jpg");
 		pro89.setCategoria(cat1);
-		pro89.setDescripcionGeneral("Los nuevos Vans BiColor son perfectos \n"
-				+ "				+ \"Disponibles para cualquier situación \\n\"\n"
-				+ "				+ \"Más comodidad \\n\"\n");
+		pro89.setDescripcionGeneral("Los nuevos Vans BiColor son perfectos. Disponibles para cualquier situación con más comodidad");
 		
 		
 		daoProducto.insert(pro1);
@@ -903,6 +896,9 @@ public class GestionDatos {
 		cat1.addProducto(pro13);
 		cat1.addProducto(pro14);
 		cat1.addProducto(pro15);
+		cat1.addProducto(pro87);
+		cat1.addProducto(pro88);
+		cat1.addProducto(pro89);
 		
 		cat2.addProducto(pro16);
 		cat2.addProducto(pro17);
