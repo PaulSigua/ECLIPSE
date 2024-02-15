@@ -14,6 +14,7 @@ import jakarta.ws.rs.GET;
 import jakarta.ws.rs.POST;
 import jakarta.ws.rs.PUT;
 import jakarta.ws.rs.Path;
+import jakarta.ws.rs.PathParam;
 import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.QueryParam;
 import jakarta.ws.rs.core.MediaType;
@@ -35,7 +36,7 @@ public class FacturaServices {
 	public Response crear(Info info) {
 		try{
 			System.out.println("+++++++++++++"+ info.getCodigo_fac());
-			Carrito carrito = gCarrito.getClientePorCliente(info.getCodigo_fac());
+			Carrito carrito = gCarrito.getCarritoPorCliente(info.getCodigo_fac());
 			gFacturas.guardarFacturas(carrito);
 			ErrorMessage error = new ErrorMessage(1, "C logro");
 			return Response.status(Response.Status.CREATED)
@@ -97,4 +98,18 @@ public class FacturaServices {
 				.build();
 		
 	}
+	
+	@GET
+	@Path("listPorUsuario/{codigoUsuario}")
+	@Produces(MediaType.APPLICATION_JSON)
+	public Response getFacturasPorCodigoUsuario(@PathParam("codigoUsuario") int codigoUsuario) {
+	    List<CabecerasFacturas> facturas = gFacturas.getFacturasPorCodigo(codigoUsuario);
+	    if (!facturas.isEmpty()) {
+	        return Response.ok(facturas).build();
+	    } else {
+	        ErrorMessage error = new ErrorMessage(6, "No se registran Facturas para el usuario con código: " + codigoUsuario);
+	        return Response.status(Response.Status.NOT_FOUND).entity(error).build();
+	    }
+	}
+
 }

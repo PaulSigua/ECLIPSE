@@ -33,10 +33,16 @@ public class FacturaDAO {
 	}
 	
 	public List<CabecerasFacturas> getAll(){
-		String jpql = "SELECT f FROM CabeceraFacturas f";
+		String jpql = "SELECT f FROM CabecerasFacturas f";
 		Query q = em.createQuery(jpql, CabecerasFacturas.class);
 		return q.getResultList();
 	}
+	
+	public List<CabecerasFacturas> getFacturasPorCodigoUsuario(int codigoUsuario) {
+        return em.createQuery("SELECT f FROM CabecerasFacturas f WHERE f.usuario.codigo = :codigoUsuario", CabecerasFacturas.class)
+                .setParameter("codigoUsuario", codigoUsuario)
+                .getResultList();
+    }
 
 }
 

@@ -124,7 +124,7 @@ public class CarritoServices {
     public Response leerPorCliente(@QueryParam("codigo") int codigo) {
         try{
             System.out.println("id " +  codigo );
-            Carrito car = gCarritos.getClientePorCliente(codigo);
+            Carrito car = gCarritos.getCarritoPorCliente(codigo);
             return Response.ok(car).build();
         }catch (Exception e) {
             // TODO: handle exception

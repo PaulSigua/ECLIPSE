@@ -41,7 +41,7 @@ public class GestionFacturas {
 			System.out.println("Entro a meter detalles");
 			DetalleFacturas det  = new DetalleFacturas();
 			det.setCantidad(carrito.getDetalles().get(i).getCantidad());
-			Producto pro = daoProducto.read(carrito.getDetalles().get(i).getCodigo());
+			Producto pro = daoProducto.read(carrito.getDetalles().get(i).getProducto().getCodigo());
 			det.setProductos(pro);
 			det.setPrecioSubTotal((float) (pro.getPrecio() * carrito.getDetalles().get(i).getCantidad()));
 			det.setPrecioIva((det.getPrecioSubTotal() * (12)) / 100);		
@@ -63,6 +63,10 @@ public class GestionFacturas {
 	
 	public List<CabecerasFacturas> getFacturas(){
 		return daoFactura.getAll();
+	}
+	
+	public List<CabecerasFacturas> getFacturasPorCodigo(int codigo) {
+		return daoFactura.getFacturasPorCodigoUsuario(codigo);
 	}
 	
 }

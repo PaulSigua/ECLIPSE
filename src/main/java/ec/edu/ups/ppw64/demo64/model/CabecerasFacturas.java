@@ -38,7 +38,6 @@ public class CabecerasFacturas {
 	@JoinColumn(name = "fk_cliente")
 	Usuario usuario;
 	
-	
 	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
 	@JoinColumn(name = "fac_codigo")
 	List<DetalleFacturas> detallesList;
@@ -105,8 +104,6 @@ public class CabecerasFacturas {
 			
 		detallesList.add(detalle);
 	}
-
-	
 	
 	@Override
 	public String toString() {
@@ -114,9 +111,5 @@ public class CabecerasFacturas {
 				+ ", precioIva=" + precioIva + ", precioSubtotal=" + precioSubtotal + ", usuario=" + usuario
 				+ ", detallesList=" + detallesList + "]";
 	}
-	
-	
-	
-	
-	
+
 }

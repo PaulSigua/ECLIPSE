@@ -37,7 +37,7 @@ public class GestionCarrito {
 		}
 	}
 
-	public Carrito getClientePorCliente(int codigo) {
+	public Carrito getCarritoPorCliente(int codigo) {
 		return daoCarrito.getCarritoPorCliente(codigo);
 	}
 
